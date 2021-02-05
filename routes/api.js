@@ -1,9 +1,13 @@
-const express = require("express");
-const Workout = require("../models/workout");
-const router = express.Router();
+const db = require("../models");
 
-router.get("/api/workout", (req, res) => {
-  Workout.find().then(workout) => {
 
-  }
-})
+module.exports = function(app) {
+app.get("/api/workouts", (req, res) => {
+  db.Workout.find({}).then(dbWorkout => {
+    res.json(dbWorkout);
+  })
+  .catch(err => {
+    res.json(err);
+  })
+});
+};
