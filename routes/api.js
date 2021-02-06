@@ -10,7 +10,7 @@ app.get("/api/workouts", (req, res) => {
   });
 });
 
-app.post("/api.workouts/:id")
+
 
 
 
