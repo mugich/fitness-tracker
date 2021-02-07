@@ -1,4 +1,4 @@
-var Workout = require("../models/Workout");
+var Workout = require("../models/Work_out");
 
 module.exports = function(app) {
 app.get("/api/workouts", (req, res) => {
