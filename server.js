@@ -3,6 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 
 
+
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -25,6 +26,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb",
 
 require("./routes/api")(app);
 require("./routes/html")(app);
+
 
 
 // Start the server
