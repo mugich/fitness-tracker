@@ -5,6 +5,14 @@ const mongoose = require("mongoose");
 
 
 const PORT = process.env.PORT || 8080;
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb",
+ {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
 const app = express();
 
 app.use(logger("dev"));
@@ -15,13 +23,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb",
- {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
-});
+
 
 
 require("./routes/api")(app);
