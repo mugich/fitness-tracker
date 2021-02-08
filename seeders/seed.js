@@ -122,7 +122,7 @@ let workoutSeed = [
       }
     ]
   }
-];
+];git 
 
 Workout.deleteMany({})
   .then(() => Workout.collection.insertMany(workoutSeed))
