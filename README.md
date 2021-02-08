@@ -21,4 +21,4 @@ The user should be able to:
 
 ### Application's appearance
 ![screenshot](./public/screenshots/fitness.png)
-![screenshot]()
+![screenshot](./public/screenshots/fit.png)
